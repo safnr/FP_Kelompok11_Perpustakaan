@@ -1,8 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-html {
+body {
     font-family: 'Poppins', sans-serif!important;
-    font-weight: 700px;
     font-size: 18px;
 }
 
+.jumbotron span {
+    color: blue;
+    font-weight: 600;
+}
+
+title {
+    font-weight: 600;
+}

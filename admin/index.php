@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="height: 40px;">
+<html>
 <head>
 	<title>Homepage Admin</title>
 	<link rel="icon" type="image/ico" href="../icon.ico">
@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link type="text/css" href="bootstrap/css/bootstrap.css" rel="stylesheet">
-	<link type="text/css" href="css/font.css" rel="stylesheet">
+	<link type="text/css" href="css/stylesheet.css" rel="stylesheet">
 	<link type="text/css" href="images/icons/css/font-awesome.css" rel="stylesheet">	
 </head>
 	<?php
@@ -24,7 +24,7 @@ session_start();
 <?php
 include "header.php";
 ?>
-		<div class="jumbotron" style="background-image: url(../bg.jpg); background-size: cover; background-position: center;">
+		<div class="jumbotron" style="background-image: url(../bg.jpg); background-size: cover; background-position: center; min-height: 640px;">
 		<div class="container-fluid">
 
 		<br>
@@ -168,17 +168,9 @@ case 'proses_perpanjang_guru':
 				include "jumbotron.php";
 			break;
 
-
-
-
-
-
-
 case 'judul_search':
 	include 'trans_siswa/judul_search.php';
 	break;
-
-
 
 		}
 		?>
@@ -189,7 +181,5 @@ case 'judul_search':
 	include "../footer.php";
 	?>
 	<br>
-	</body>
+</body>
 <?php //} ?>
-</html>
-
