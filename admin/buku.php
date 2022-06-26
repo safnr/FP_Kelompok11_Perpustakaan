@@ -78,13 +78,7 @@
             </div></center>
             <!--/.container-->
         
-        <!--/.wrapper--><br />
-        <div class="footer span-12">
-            <div class="container">
-              <center> <b class="copyright"><a href=""> SMPN 1 Babadan</a> &copy; 2016 DataTables by Bootstrap </b></center>
-            </div>
-        </div>
-        
+        <!--/.wrapper--><br />       
         <script src="datatables/jquery.dataTables.js"></script>
         <script src="datatables/dataTables.bootstrap.js"></script>
         <script>

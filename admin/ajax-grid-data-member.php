@@ -24,7 +24,7 @@ $columns = array(
 
 // getting total number records without any search
 $sql = "SELECT nis, nama, kelas, jenis";
-$sql.=" FROM siswa";
+$sql.=" FROM member";
 $query=mysqli_query($conn, $sql) or die("ajax-grid-data.php: get InventoryItems");
 $totalData = mysqli_num_rows($query);
 $totalFiltered = $totalData;  // when there is no search parameter then total number rows = total number filtered rows.
@@ -33,7 +33,7 @@ $totalFiltered = $totalData;  // when there is no search parameter then total nu
 if( !empty($requestData['search']['value']) ) {
 	// if there is a search parameter
 	$sql = "SELECT nis, nama, kelas, jenis ";
-	$sql.=" FROM siswa";
+	$sql.=" FROM member";
 	$sql.=" WHERE nama LIKE '%".$requestData['search']['value']."%' ";    // $requestData['search']['value'] contains search parameter
 	$sql.=" OR nis LIKE '".$requestData['search']['value']."%' ";
 	$sql.=" OR kelas LIKE '".$requestData['search']['value']."%' ";
@@ -47,7 +47,7 @@ if( !empty($requestData['search']['value']) ) {
 } else {	
 
 	$sql = "SELECT nis, nama, kelas, jenis ";
-	$sql.=" FROM siswa";
+	$sql.=" FROM member";
 	$sql.=" ORDER BY ". $columns[$requestData['order'][0]['column']]."   ".$requestData['order'][0]['dir']."   LIMIT ".$requestData['start']." ,".$requestData['length']."   ";
 	$query=mysqli_query($conn, $sql) or die("ajax-grid-data.php: get PO");
 	
@@ -62,7 +62,7 @@ while( $row=mysqli_fetch_array($query) ) {  // preparing an array
 	$nestedData[] = $row["kelas"];
 	$nestedData[] = $row["jenis"];
     $nestedData[] = '<td><center>
-                     <a href="?page=siswa_edit&nis='.$row['nis'].'"  data-toggle="tooltip" title="Edit" class="btn btn-sm btn-warning"> <i class="menu-icon icon-pencil"></i> </a>
+                     <a href="?page=member_edit&nis='.$row['nis'].'"  data-toggle="tooltip" title="Edit" class="btn btn-sm btn-warning"> <i class="menu-icon icon-pencil"></i> </a>
                     
 				     </center></td>';		
 	

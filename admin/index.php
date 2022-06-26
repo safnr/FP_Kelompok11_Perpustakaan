@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Homepage Admin</title>
+	<title>LIBRARY Admin</title>
 	<link rel="icon" type="image/ico" href="../icon.ico">
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,21 +42,21 @@ include "header.php";
 		error_reporting(0);
 		switch ($_GET['page'])
 		 {
-			//siswa
-			case 'siswa':
-				include "siswa.php";
+			//member
+			case 'member':
+				include "member.php";
 			break;
-			case 'siswa_input':
-				include "siswa_input.php";
+			case 'member_input':
+				include "member_input.php";
 				break;
-				case 'siswa_edit':
-				include "siswa_edit.php";
+				case 'member_edit':
+				include "member_edit.php";
 					break;
-					case 'siswa_update':
-					include "siswa_update.php";
+					case 'member_update':
+					include "member_update.php";
 						break;
-						case 'siswa_hapus':
-						include "siswa_hapus.php";
+						case 'member_hapus':
+						include "member_hapus.php";
 						break;
 
 			//buku

@@ -32,8 +32,7 @@
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href=""><i class="icon-user"></i> Anggota <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="?page=siswa">Siswa</a></li>
-            <li><a href="?page=guru">Guru</a></li>
+            <li><a href="?page=member">Member</a></li>
           </ul>
         </li>
         <li class="dropdown">

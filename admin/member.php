@@ -4,7 +4,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Data Anggota SISWA</title>
+        <title>Data Anggota Member</title>
         <!-- css table datatables/dataTables -->
 	<link rel="stylesheet" href="datatables/dataTables.bootstrap.css"/>
     
@@ -22,12 +22,12 @@
 <?php
              if(isset($_GET['hal']) == 'hapus'){
                 $nis = $_GET['nis'];
-                $cek = mysqli_query($koneksi, "SELECT * FROM siswa WHERE nis='$nis'");
+                $cek = mysqli_query($koneksi, "SELECT * FROM member WHERE nis='$nis'");
                 if(mysqli_num_rows($cek) == 0){
                     echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> Data tidak ditemukan.</div>';
 
                 }else{
-                    $delete = mysqli_query($koneksi, "DELETE FROM siswa WHERE nis='$nis'");
+                    $delete = mysqli_query($koneksi, "DELETE FROM member WHERE nis='$nis'");
                     if($delete){
                         echo '<div class="alert alert-primary alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> Data berhasil dihapus.</div>';
                     }else{
@@ -45,7 +45,7 @@
                         <div class="panel-heading">
 
                         
-                        <h3 class="panel-title"><i class="icon-user"></i> Data Anggota SISWA</h3> 
+                        <h3 class="panel-title"><i class="icon-user"></i> Data Anggota Member</h3> 
                         </div>
                         <div class="panel-body">
                                     <table id="lookup" class="table table-bordered table-hover">  
@@ -64,7 +64,7 @@
                                         </tbody>
                                     </table>
                                     <div class="pull-right">
-                            <a href="?page=siswa_input" class="btn btn-sm btn-primary">Tambah Data</a>
+                            <a href="?page=member_input" class="btn btn-sm btn-primary">Tambah Data</a>
                             </div>
                                 </div>
                             </div>
@@ -77,13 +77,7 @@
             </div></center>
             <!--/.container-->
         
-        <!--/.wrapper--><br />
-        <div class="footer span-12">
-            <div class="container">
-              <center> <b class="copyright"><a href=""> SMPN 1 Babadan</a> &copy; 2016 DataTables by Bootstrap </b></center>
-            </div>
-        </div>
-        
+        <!--/.wrapper--><br />        
         <script src="datatables/jquery.dataTables.js"></script>
         <script src="datatables/dataTables.bootstrap.js"></script>
         <script>
