@@ -10,7 +10,7 @@
 	<link type="text/css" href="css/stylesheet.css" rel="stylesheet">
 	<link type="text/css" href="images/icons/css/font-awesome.css" rel="stylesheet">	
 </head>
-	<?php
+<?php
 session_start();
 // if(!isset($_SESSION['nama'])){
 // 	echo "<script>alert('Silahkan login terlebih dahulu')</script>";

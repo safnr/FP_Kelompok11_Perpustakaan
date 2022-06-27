@@ -9,8 +9,11 @@
 			<span>Admin!</span></h1></p>
 		<br>
 		<center><p>
-			<h3 style="background-color: #3B3C47; color: white; border-radius: 8px; width: 640px; padding: 15px; background-repeat: no-repeat;">
-				Anda terekam berkunjung pada pukul <?php echo date("h:i:s A"); ?>
+			<h3 style="background-color: #3B3C47; color: white; border-radius: 15px; width: 640px; padding: 15px; background-repeat: no-repeat;">
+				Anda terekam berkunjung pada pukul 
+				<?php
+				date_default_timezone_set("Asia/Jakarta");
+				echo date("h:i:s A"); ?>
 			</h3>
 		</p>
 		</div>

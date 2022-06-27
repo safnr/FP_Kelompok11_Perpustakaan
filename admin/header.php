@@ -29,12 +29,7 @@
       <ul class="nav navbar-nav">
         <li class="nav"><a href="index.php"><i class="icon-home"></i>Home</a></li>
         <li class="nav"><a href="?page=buku"><i class="icon-book"></i>Katalog Buku</a></li>
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href=""><i class="icon-user"></i> Anggota <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="?page=member">Member</a></li>
-          </ul>
-        </li>
+        <li class="nav"><a href="?page=member"><i class="icon-user"></i>Member</a></li>
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-shopping-cart"></i> Transaksi <span class="caret"></span></a>
           <ul class="dropdown-menu">
