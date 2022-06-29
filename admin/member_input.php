@@ -5,7 +5,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Input Data Siswa</title>
+	<title>Input Data Member</title>
 	<!-- css table datatables/dataTables -->
 	<link rel="stylesheet" href="datatables/dataTables.bootstrap.css" />
 	<link type="text/css" href="images/icons/css/font-awesome.css" rel="stylesheet">
@@ -21,10 +21,10 @@
 				<div class="content">
 					<?php
 					if (isset($_POST['input'])) {
-						$npm = $_POST['npm'];
-						$nama = $_POST['nama'];
-						$paralel = $_POST['paralel'];
-						$jk = $_POST['jk'];
+						$npm = mysqli_real_escape_string($conn,$_POST['npm']);
+						$nama = mysqli_real_escape_string($conn,$_POST['nama']);
+						$paralel = mysqli_real_escape_string($conn,$_POST['paralel']);
+						$jk = mysqli_real_escape_string($conn,$_POST['jk']);
 
 						$cek = mysqli_query($conn, "SELECT * FROM member WHERE npm='$npm'");
 						if (mysqli_num_rows($cek) == 0) {

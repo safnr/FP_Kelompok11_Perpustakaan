@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="font.css">
   <style>
   
   </style>
@@ -39,12 +38,12 @@
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-print"></i> Laporan <span class="caret"></span></a>
           <ul class="dropdown-menu">
-          <li><a href="laporan/lap-buku.php" target="new window">Laporan Inventaris Buku</a></li>
             <li><a href="laporan/lap-member.php" target="new window">Laporan Data Member</a></li>
-            <li><a href="laporan/lap-guru.php" target="new window">Laporan Data Guru</a></li>
-            <a class="divider">
-            <li><a href="laporan/lap-pinjam-guru.php" target="new window">Laporan Peminjaman Guru</a></li>
             <li><a href="laporan/lap-pinjam-member.php" target="new window">Laporan Peminjaman Member</a></li>
+            <a class="divider">
+            <li><a href="laporan/grafik-pengunjung.php" target="new window">Grafik Pengunjung</a></li>
+            <a class="divider">
+            <li><a href="laporan/report-member.php" target="new window">Report Data Member</a></li>
             
           </ul>
         </li>

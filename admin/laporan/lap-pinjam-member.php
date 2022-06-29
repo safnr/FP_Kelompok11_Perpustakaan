@@ -3,22 +3,22 @@
 $db_host	= "localhost";
 $db_user	= "root";
 $db_pass	= "";
-$db_name	= "smp";
+$db_name	= "db_perpus";
 
-$konek	= mysql_connect($db_host,$db_user,$db_pass,$db_name) or die ("Gagal koneksi ke server");
-mysql_select_db($db_name, $konek) or die ("Gagal mengaktifkan database".mysql_error());
- 
-//akhir koneksi
+$konek	= mysqli_connect($db_host,$db_user,$db_pass,$db_name) or die ("Gagal koneksi ke server");
+if (!$konek) {
+    die("Gagal mengaktifkan database" . mysqli_connect_error());
+} 
 
 
 //mengambil data dari tabel dan memasukkannya dalam array
-$query = "SELECT peminjaman.judul, peminjaman.nis, siswa.nama, siswa.kelas, peminjaman.tgl_pinjam, peminjaman.jmlpinjam from peminjaman,siswa where peminjaman.nis=siswa.nis order by nama";
-$sql = mysql_query($query);
+$query = "SELECT peminjaman.judul, peminjaman.npm, member.nama, member.paralel, peminjaman.tgl_pinjam, peminjaman.jmlpinjam from peminjaman,member where peminjaman.npm=member.npm order by nama";
+$sql = mysqli_query($konek,$query);
 $data = array();
 if ($sql === FALSE) {
-	die(mysql_error());
+	die(mysqli_error($konek));
 }
-while ($row = mysql_fetch_assoc($sql)) {
+while ($row = mysqli_fetch_assoc($sql)) {
 	array_push($data, $row);
 }
 

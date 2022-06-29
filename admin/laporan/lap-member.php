@@ -3,22 +3,23 @@
 $db_host	= "localhost";
 $db_user	= "root";
 $db_pass	= "";
-$db_name	= "smp";
+$db_name	= "db_perpus";
 
-$konek	= mysql_connect($db_host,$db_user,$db_pass,$db_name) or die ("Gagal koneksi ke server");
-mysql_select_db($db_name, $konek) or die ("Gagal mengaktifkan database".mysql_error());
- 
+$konek	= mysqli_connect($db_host,$db_user,$db_pass,$db_name) or die ("Gagal koneksi ke server");
+if (!$konek) {
+    die("Connection failed: " . mysqli_connect_error());
+} 
 //akhir koneksi
 
 
 //mengambil data dari tabel dan memasukkannya dalam array
-$query = "SELECT * FROM siswa ORDER BY nama";
-$sql = mysql_query($query);
+$query = "SELECT * FROM member ORDER BY nama";
+$sql = mysqli_query($konek,$query);
 $data = array();
 if ($sql === FALSE) {
-	die(mysql_error());
+	die(mysqli_error($konek));
 }
-while ($row = mysql_fetch_assoc($sql)) {
+while ($row = mysqli_fetch_assoc($sql)) {
 	array_push($data, $row);
 }
 

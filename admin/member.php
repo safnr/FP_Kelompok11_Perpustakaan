@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,11 +19,23 @@
     <!-- Penambahan Navigasi Bar Atas belum-->
 
     <?php
-    include "../conn.php";
+    //koneksi database
+    $db_host    = "localhost";
+    $db_user    = "root";
+    $db_pass    = "";
+    $db_name    = "db_perpus";
+
+    $konek    = mysqli_connect($db_host, $db_user, $db_pass, $db_name) or die("Gagal koneksi ke server");
+    if (!$konek) {
+        die("Gagal mengaktifkan database" . mysqli_connect_error());
+    }
+    
     if (isset($_GET['hal']) == 'hapus') {
-        $npm = $_GET['npm'];
-        $cek = mysqli_query($conn, "SELECT * FROM member WHERE npm='$npm'");
-        if (mysqli_num_rows($cek) == 0) {
+        $npm = mysqli_real_escape_string($conn, $_GET['npm']);
+        $sql = mysqli_query($conn, "SELECT * FROM member WHERE npm='$npm'");
+        $num = mysqli_num_rows($sql);
+
+        if ($sql == 0) {
             echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> Data tidak ditemukan.</div>';
         } else {
             $delete = mysqli_query($conn, "DELETE FROM member WHERE npm='$npm'");
