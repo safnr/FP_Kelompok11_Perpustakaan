@@ -33,22 +33,18 @@
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-shopping-cart"></i> Transaksi <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="?page=data-pinjam-siswa">Peminjaman Siswa</a></li>
-            <li><a href="?page=data-pinjam-guru">Peminjaman Guru</a></li>
-            <a class="divider">
-            <li><a href="?page=data-kembali-guru">Pengembalian Buku Guru</a></li>
-            <li><a href="?page=data-kembali-siswa">Pengembalian Buku Siswa</a></li>
-            </ul>
+            <li><a href="?page=data-pinjam-member">Peminjaman Member</a></li>
+          </ul>
 
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-print"></i> Laporan <span class="caret"></span></a>
           <ul class="dropdown-menu">
           <li><a href="laporan/lap-buku.php" target="new window">Laporan Inventaris Buku</a></li>
-            <li><a href="laporan/lap-siswa.php" target="new window">Laporan Data Siswa</a></li>
+            <li><a href="laporan/lap-member.php" target="new window">Laporan Data Member</a></li>
             <li><a href="laporan/lap-guru.php" target="new window">Laporan Data Guru</a></li>
             <a class="divider">
             <li><a href="laporan/lap-pinjam-guru.php" target="new window">Laporan Peminjaman Guru</a></li>
-            <li><a href="laporan/lap-pinjam-siswa.php" target="new window">Laporan Peminjaman Siswa</a></li>
+            <li><a href="laporan/lap-pinjam-member.php" target="new window">Laporan Peminjaman Member</a></li>
             
           </ul>
         </li>

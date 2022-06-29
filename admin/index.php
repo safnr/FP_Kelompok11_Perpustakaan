@@ -20,7 +20,7 @@ session_start();
 ?>
 
 <body>
-			
+	
 <?php
 include "header.php";
 ?>
@@ -115,53 +115,53 @@ case 'peminjaman_guru':
 	include 'peminjaman_guru.php';
 	break;
 
-	case 'data-pinjam-siswa':
-		include 'trans_siswa/data-pinjam-siswa.php';
+	case 'data-pinjam-member':
+		include 'trans_member/data-pinjam-member.php';
 		break;
 
 //pengembalian
-case 'proses_kembali_guru':
-	include 'trans_guru/proses_kembali_guru.php';
+case 'proses_kembali_member':
+	include 'trans_member/proses_kembali_member.php';
 	break;
 
-	case 'proses_kembali_siswa':
-	include 'trans_siswa/proses_kembali_siswa.php';
+	case 'proses_kembali_member':
+	include 'trans_member/proses_kembali_member.php';
 	break;
 
 
-		case 'data-pinjam-guru':
-			include 'trans_guru/data-pinjam-guru.php';
+		case 'data-pinjam-member':
+			include 'trans_member/data-pinjam-member.php';
 			break;
-case 'pengembalian-guru':
-	include 'trans_guru/pengembalian-guru.php';
+case 'pengembalian-member':
+	include 'trans_member/pengembalian-member.php';
 	break;
 
-case 'pengembalian-siswa':
-	include 'trans_siswa/pengembalian-siswa.php';
+case 'pengembalian-member':
+	include 'trans_member/pengembalian-member.php';
 	break;
-case 'data-kembali-siswa':
-	include 'trans_siswa/data-kembali-siswa.php';
-	break;
-
-
-case 'data-kembali-guru':
-	include 'trans_guru/data-kembali-guru.php';
+case 'data-kembali-member':
+	include 'trans_member/data-kembali-member.php';
 	break;
 
-case 'perpanjangan-siswa':
-		include 'trans_siswa/perpanjangan-siswa.php';
+
+case 'data-kembali-member':
+	include 'trans_member/data-kembali-member.php';
+	break;
+
+case 'perpanjangan-member':
+		include 'trans_member/perpanjangan-member.php';
 		break;
 
-	case 'perpanjangan-guru':
-		include 'trans_guru/perpanjangan-guru.php';
+	case 'perpanjangan-member':
+		include 'trans_member/perpanjangan-member.php';
 		break;
 
-case 'proses_perpanjang_guru':
-	include 'trans_guru/proses_perpanjang_guru.php';
+case 'proses_perpanjang_member':
+	include 'trans_guru/proses_perpanjang_member.php';
 	break;
 
-	case 'proses_perpanjang_siswa':
-	include 'trans_siswa/proses_perpanjang_siswa.php';
+	case 'proses_perpanjang_member':
+	include 'trans_member/proses_perpanjang_member.php';
 	break;
 
 			default:
@@ -169,7 +169,7 @@ case 'proses_perpanjang_guru':
 			break;
 
 case 'judul_search':
-	include 'trans_siswa/judul_search.php';
+	include 'trans_member/judul_search.php';
 	break;
 
 		}

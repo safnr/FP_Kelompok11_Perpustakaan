@@ -11,5 +11,5 @@ function counter(time,url){
 }
 
 $(document).ready(function(){
-	counter(5,'index.php?page=data-pinjam-guru');
+	counter(5,'index.php?page=data-pinjam-siswa');
 });

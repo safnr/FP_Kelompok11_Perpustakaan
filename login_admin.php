@@ -16,12 +16,12 @@
         <div class="container-fluid">
             <div class="col-md-4"></div>
             <div  class="col-md-4">
-                <div  class="jumbotron" style="background-color: rgba(255,255,255,0.80); border-radius: 25px;">
+                <div  class="jumbotron" style="background-color: rgba(255,255,255,0.80); border-radius: 25px; margin-top: 20%">
                 <div align="left" class="control-group">
                     <center><h3 class="panel-title" style="font-size: 25px; font-weight: 600;"><i class="icon-user"></i> LOGIN ADMIN </h3> 
                 </div>
                 <div class="panel-body">
-                    <form name="form1" id="form1" class="form-horizontal row-fluid" action="cek-login-admin.php" method="POST" >
+                    <form name="form1" id="form1" class="form-horizontal row-fluid" action="cek-login-admin.php" method="POST">
                         <label class="control-label" for="basicinput">Username</label>
                         <div class="controls">
                             <input type="text" name="user" id="user"  placeholder="username" class="form-control span8 tip" >

@@ -1,16 +1,16 @@
 <?php
-include "conn.php";
+include "../conn.php";
 if(isset($_POST['update'])){
-				$nis	       = $_POST['nis'];
-				$nama		   = $_POST['nama'];
-				$kelas  = $_POST['kelas'];
-				$jenis = $_POST['jenis'];
+				$npm = $_POST['npm'];
+				$nama = $_POST['nama'];
+				$paralel = $_POST['paralel'];
+				$jk = $_POST['jk'];
 				
-				$update = mysqli_query($koneksi, "UPDATE siswa SET nis='$nis', nama='$nama', kelas='$kelas', jenis='$jenis' WHERE nis='$nis'") or die(mysqli_error());
+				$update = mysqli_query($conn, "UPDATE member SET npm='$npm', nama='$nama', paralel='$paralel', jk='$jk WHERE npm='$npm'") or die(mysqli_error($conn));
 				if($update){
-					echo "<script>alert('Data Berhasil di Update!'); window.location = '?page=siswa'</script>";
+					echo "<script>alert('Data Berhasil di Update!'); window.location = '?page=member'</script>";
 				}else{
-					echo "<script>alert('Data Gagal di Update!'); window.location = 'siswa.php'</script>";
+					echo "<script>alert('Data Gagal di Update!'); window.location = 'member.php'</script>";
 				}
 			}
-            ?>
+?>

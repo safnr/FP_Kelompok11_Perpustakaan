@@ -3,30 +3,31 @@
 
 
 
+
+
  <div class="container-fluid">
  <div class="col-md-12">
-                            <section class="panel">
+                     
+           <section class="panel">
+
                               <header class="panel-heading">
-                               <center> <b>  Data Peminjaman SISWA</b> </center>
+
+                               <center> <b>  Data Peminjaman Member</b> </center>
                             </header>
+
                             <div class="panel-body table-responsive">
                             <?php
-                    $query="select peminjaman.idtrx, peminjaman.id, peminjaman.judul, peminjaman.nis, siswa.nama, peminjaman.tgl_pinjam, peminjaman.tgl_kembali, peminjaman.jmlpinjam from peminjaman,siswa where siswa.nis=peminjaman.nis and status='Dipinjam' order by idtrx desc";
+                    $query="select guru_tr.idtrx, guru_tr.id, guru_tr.judul, guru_tr.nip, guru.nama, guru_tr.tgl_pinjam, guru_tr.tgl_kembali, guru_tr.jmlpinjam from guru_tr,guru where guru_tr.nip=guru.nip and status='Dipinjam' order by idtrx desc";
                     $tampil=mysql_query($query) or die(mysql_error());
                     ?>
-                                                <form class="navbar-form navbar-left" role="search" action="?page=judul_search" method="post">
-        <div class="form-group">
-          <input type="text" name="cari" class="form-control" placeholder="Masukkan Judul">
-        </div>
-        <button type="submit" class="btn btn-default"  id="button_find">Submit</button>
-      </form>
-                                <table class="table table-hover">
+       
+                                       <table class="table table-hover">
                                   <thead>
                                     <tr>
                                         <th>IdTrx</th>
                                         <th>Id Buku</th>
                                         <th>Judul</th>
-                                        <th>NIS</th>
+                                        <th>NPM</th>
                                         <th>Nama</th>
                                         <th> Tgl Pinjam </th>
                                         <th>Tempo</th>
@@ -45,7 +46,7 @@
                     <td><?php echo $row['idtrx']; ?></td>
                     <td><?php echo $row['id']; ?></td>
                     <td><?php echo $row['judul'];?></td>
-                    <td><?php echo $row['nis'];?></td>
+                    <td><?php echo $row['npm'];?></td>
                     <td><?php echo $row['nama'];?></td>
                     <td><?php echo $row['tgl_pinjam'];?></td>
                     <td><?php echo $row['tgl_kembali'];?></td>
@@ -76,8 +77,8 @@ echo "<font color='red'>" .floor($selisih). " hari. <br>Rp. $denda,00 ";
 
 }
 ?></td>
- <td align="center"><a href="?page=pengembalian-siswa&idtrx=<?php echo $row['0']; ?>">Kembalikan</a></td>
- <td align="center"><a href="?page=perpanjangan-siswa&idtrx=<?php echo $row['0']; ?>">Perpanjang</a></td>
+ <td><a href="?page=pengembalian-guru&idtrx=<?php echo $row['0']; ?>">Kembalikan</a></td>
+ <td><a href="?page=perpanjangan-guru&idtrx=<?php echo $row['0']; ?>">Perpanjang</a></td>
                 
                 
               </tr>              </td>
@@ -88,7 +89,7 @@ echo "<font color='red'>" .floor($selisih). " hari. <br>Rp. $denda,00 ";
               ?>
               
                       </table><hr />
-                  <?php $tampil1=mysql_query("select peminjaman.idtrx, peminjaman.id, peminjaman.judul, peminjaman.nis, siswa.nama, peminjaman.tgl_pinjam, peminjaman.tgl_kembali, peminjaman.jmlpinjam from peminjaman,siswa where siswa.nis=peminjaman.nis and status='Dipinjam'");
+                  <?php $tampil1=mysql_query("select guru_tr.idtrx, guru_tr.id, guru_tr.judul, guru_tr.nip, guru.nama, guru_tr.tgl_pinjam, guru_tr.tgl_kembali, guru_tr.jmlpinjam from guru_tr,guru where guru_tr.nip=guru.nip and status='Dipinjam' order by idtrx desc");
                         $user1=mysql_num_rows($tampil1);
                     ?>
                   <center><h4>Jumlah Total Peminjam : <?php echo "$user1"; ?> Orang </h4> </center>

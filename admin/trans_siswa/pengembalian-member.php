@@ -30,7 +30,7 @@ $kembali		= date("Y-m-d", $satu_hari);
                                          
                             <?php
            $idtrx = $_GET['idtrx'];
-			$sql = mysqli_query($koneksi, "SELECT * FROM guru_tr WHERE idtrx='$idtrx'");
+			$sql = mysqli_query($koneksi, "SELECT * FROM peminjaman WHERE idtrx='$idtrx'");
 			if(mysqli_num_rows($sql) == 0){
 			
 			}else{
@@ -44,10 +44,10 @@ $kembali		= date("Y-m-d", $satu_hari);
             <center><div class="panel panel-warning" style="width: 500px;">
                         <div class="panel-heading">
 
-                        <h3 class="panel-title">==> Pengembalian BUKU Guru <==</h3>
+                        <h3 class="panel-title">==> Pengembalian BUKU SISWA <==</h3>
                         </div>
                         <div class="panel-body">
-                         <form name="form1" id="form1" class="form-horizontal row-fluid" action="?page=proses_kembali_guru" method="POST" >
+                         <form name="form1" id="form1" class="form-horizontal row-fluid" action="?page=proses_kembali_siswa" method="POST" >
 
 
 
@@ -78,9 +78,9 @@ $kembali		= date("Y-m-d", $satu_hari);
 										
                                         
                                         <div align="left" class="control-group">
-											<label class="control-label" for="basicinput">NIP</label>
+											<label class="control-label" for="basicinput">NIS</label>
 											<div class="controls">
-												<input type="text" name="nip" id="nip" value="<?php echo $row['nip'] ;?>" class="form-control span8 tip" readonly="readonly">
+												<input type="text" name="nis" id="nis" value="<?php echo $row['nis'] ;?>" class="form-control span8 tip" required>
 											</div>
 										</div>
 
@@ -97,7 +97,7 @@ $kembali		= date("Y-m-d", $satu_hari);
 											<div class="controls">
 												<input type="submit" name="kembalikan" id="kembalikan" value="Kembalikan" class="btn btn-sm btn-primary"/>
 												
-                                               <a href="?page=data-pinjam-guru" class="btn btn-sm btn-danger">Kembali</a>
+                                               <a href="?page=data-pinjam-siswa" class="btn btn-sm btn-danger">Kembali</a>
 											</div>
 										</div>
 									</form>
