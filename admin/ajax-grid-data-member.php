@@ -10,14 +10,14 @@ $columns = array(
 	// datatable column index  => database column name
 	0 => 'npm',
 	1 => 'nama',
-	2 => 'kelas',
+	2 => 'paralel',
 	3 => 'jk',
 );
 
 // getting total number records without any search
-$sql = "SELECT npm, nama, kelas, jk";
+$sql = "SELECT npm, nama, paralel, jk";
 $sql .= " FROM member";
-$query = mysqli_query($conn, $sql) or die("ajax-grid-data.php: get InventoryItems");
+$query = mysqli_query($conn, $sql) or die("ajax-grid-data-member.php: get InventoryItems");
 $totalData = mysqli_num_rows($query);
 $totalFiltered = $totalData;  // when there is no search parameter then total number rows = total number filtered rows.
 

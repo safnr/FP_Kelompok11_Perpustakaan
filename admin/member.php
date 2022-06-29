@@ -25,10 +25,7 @@
     $db_pass    = "";
     $db_name    = "db_perpus";
 
-    $konek    = mysqli_connect($db_host, $db_user, $db_pass, $db_name) or die("Gagal koneksi ke server");
-    if (!$konek) {
-        die("Gagal mengaktifkan database" . mysqli_connect_error());
-    }
+    $conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name) or die("Gagal koneksi ke server");
     
     if (isset($_GET['hal']) == 'hapus') {
         $npm = mysqli_real_escape_string($conn, $_GET['npm']);
@@ -100,7 +97,15 @@
                 "serverSide": true,
                 "ajax": {
                     url: "ajax-grid-data-member.php", // json datasource
-                    type: "post", // method  , by default get
+                    type: "GET", // method  , by default get
+                    // success: function (result){
+                    //     var objResult = JSON.parse(result);
+                    //     var result = 1;
+                    //     $.each(objResult, function(key,val){
+                    //         var barisBaru = $("<tr>");
+                            
+                    //     })
+                    // }
                     error: function() { // error handling
                         $(".lookup-error").html("");
                         $("#lookup").append('<tbody class="employee-grid-error"><tr><th colspan="3">No data found in the server</th></tr></tbody>');
