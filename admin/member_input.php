@@ -3,22 +3,18 @@
 <html lang="en">
 
 <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Input Data Siswa</title>
+	<!-- css table datatables/dataTables -->
+	<link rel="stylesheet" href="datatables/dataTables.bootstrap.css" />
+	<link type="text/css" href="images/icons/css/font-awesome.css" rel="stylesheet">
 
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Input Data Siswa</title>
-		<!-- css table datatables/dataTables -->
-		<link rel="stylesheet" href="datatables/dataTables.bootstrap.css" />
-		<link type="text/css" href="images/icons/css/font-awesome.css" rel="stylesheet">
-
-		<script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
-		<script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
-	</head>
+	<script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+	<script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
+</head>
 
 <body>
-
-
 	<div class="container">
 		<div class="row">
 			<div class="span12">
@@ -126,5 +122,4 @@
 					});
 				});
 			</script>
-
 </body>
