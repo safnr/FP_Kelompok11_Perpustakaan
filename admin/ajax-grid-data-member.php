@@ -1,7 +1,13 @@
 <?php
 /* Database connection start */
-include "../conn.php";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "db_perpus";
 
+$conn = mysqli_connect($servername, $username, $password, $dbname) or die("Connection failed: " . mysqli_connect_error());
+
+/* Database connection end */
 // storing  request (ie, get/post) global array to a variable  
 $requestData = $_REQUEST;
 
@@ -17,7 +23,7 @@ $columns = array(
 // getting total number records without any search
 $sql = "SELECT npm, nama, paralel, jk";
 $sql .= " FROM member";
-$query = mysqli_query($conn, $sql) or die("ajax-grid-data-member.php: get InventoryItems");
+$query = mysqli_query($conn, $sql) or die("ajax-grid-data.php: get InventoryItems");
 $totalData = mysqli_num_rows($query);
 $totalFiltered = $totalData;  // when there is no search parameter then total number rows = total number filtered rows.
 

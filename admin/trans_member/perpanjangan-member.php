@@ -1,5 +1,12 @@
 <?php
-include 'conn.php';
+//koneksi database
+$db_host    = "localhost";
+$db_user    = "root";
+$db_pass    = "";
+$db_name    = "db_perpus";
+
+$conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name) or die("Gagal koneksi ke server");
+
 $pinjam			= date("Y-m-d");
 $sepuluh		= mktime(0, 0, 0, date("n"), date("j") + 20, date("Y"));
 $kembali		= date("Y-m-d", $sepuluh);
@@ -31,7 +38,7 @@ $kembali		= date("Y-m-d", $sepuluh);
 				<div class="content">
 
 					<?php
-					$idtrx = mysqli_real_escape_string($conn,$_GET['idtrx']);
+					$idtrx = mysqli_real_escape_string($conn, $_GET['idtrx']);
 					$sql = mysqli_query($conn, "SELECT * FROM member_tr WHERE idtrx='$idtrx'");
 					$num = mysqli_num_rows($sql);
 
