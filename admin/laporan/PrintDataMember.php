@@ -19,7 +19,7 @@ $content = "
 	";
 
 //mengambil data dari tabel dan memasukkannya dalam array
-$query = "SELECT * FROM member ORDER BY npm";
+$query = "SELECT npm, nama, paralel, jk FROM member ORDER BY npm";
 $sql = mysqli_query($conn, $query);
 $data = array();
 if ($sql === FALSE) {
