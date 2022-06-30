@@ -74,9 +74,7 @@ foreach ($data as $baris) {
 	$fill = !$fill;
 	$mpdf->Ln();
 }
-// $mpdf->setY(-30);
-// $mpdf->Line(10,$mpdf->GetY(),200,$mpdf->GetY());
-// $mpdf->Cell(10,5,'Halaman '.$mpdf->PageNo(),0,0,'L');
+
 
 
 //Output File PDF
