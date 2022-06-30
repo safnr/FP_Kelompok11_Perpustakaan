@@ -11,7 +11,9 @@
 	<link type="text/css" href="images/icons/css/font-awesome.css" rel="stylesheet">
 </head>
 <?php
+//Mulai Sesi
 session_start();
+//Jika Tidak ada Sesi, maka kembali ke halaman login
 if (!isset($_SESSION['nama'])) {
 	echo "<script>alert('Silahkan login terlebih dahulu')</script>";
 	echo "<meta http-equiv='refresh' content='0; url=../login_admin.php'>";
@@ -20,8 +22,8 @@ if (!isset($_SESSION['nama'])) {
 ?>
 
 	<body>
-
 		<?php
+		//Memasukkan file header.php
 		include "header.php";
 		?>
 		<div class="jumbotron" style="background-image: url(../bg.jpg); background-size: cover; background-position: center; min-height: 640px;">
@@ -31,6 +33,7 @@ if (!isset($_SESSION['nama'])) {
 				<center>
 					<div class="date" style="background-color: white; border-radius: 10px; width: 220px; background-repeat: no-repeat;">
 						<?php
+						//Membuat tanggal hari ini
 						$array_hr = array(1 => "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu");
 						$hr = $array_hr[date('N')];
 						$tgl = date('j');
@@ -43,6 +46,7 @@ if (!isset($_SESSION['nama'])) {
 				</center>
 				<?php
 				error_reporting(0);
+				//Untuk melakukan proses pemilihan 
 				switch ($_GET['page']) {
 						//member
 					case 'member':

@@ -40,8 +40,8 @@
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-print"></i> Laporan <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="laporan/lap-member.php" target="new window">Laporan Data Member</a></li>
-              <li><a href="laporan/lap-pinjam-member.php" target="new window">Laporan Peminjaman Member</a></li>
+              <li><a href="laporan/PrintDataMember.php" target="new window">Laporan Data Member</a></li>
+              <li><a href="laporan/PrintDataPeminjaman.php" target="new window">Laporan Peminjaman Member</a></li>
               <a class="divider">
                 <li><a href="laporan/grafik-pengunjung.php" target="new window">Grafik Pengunjung</a></li>
                 <a class="divider">

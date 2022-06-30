@@ -3,19 +3,15 @@
 <html lang="en">
 
 <head>
-
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Edit Data Member</title>
-		<!-- css table datatables/dataTables -->
-		<link rel="stylesheet" href="datatables/dataTables.bootstrap.css" />
-
-		<link type="text/css" href="images/icons/css/font-awesome.css" rel="stylesheet">
-
-		<script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
-		<script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
-	</head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Edit Data Member</title>
+	<!-- css table datatables/dataTables -->
+	<link rel="stylesheet" href="datatables/dataTables.bootstrap.css" />
+	<link type="text/css" href="images/icons/css/font-awesome.css" rel="stylesheet">
+	<script src="scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+	<script src="scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
+</head>
 
 <body>
 
@@ -40,11 +36,11 @@
 								<h3 class="panel-title"><i class="icon-user"></i>Update Data Member</h3>
 							</div>
 							<div class="panel-body">
-								<form name="form1" id="form1" class="form-horizontal row-fluid" action="?page=siswa_update" method="POST">
+								<form name="form1" id="form1" class="form-horizontal row-fluid" action="?page=member_update" method="POST">
 									<div align="left" class="control-group">
 										<label class="control-label" for="basicinput">NPM</label>
 										<div class="controls">
-											<input type="text" name="nis" id="nis" value="<?php echo $row['nis']; ?>" placeholder="NIS Siswa Tolong diisi" class="form-control span8 tip" readonly="yes">
+											<input type="text" name="npm" id="npm" value="<?php echo $row['npm']; ?>" placeholder="NIS Siswa Tolong diisi" class="form-control span8 tip" readonly="yes">
 										</div>
 									</div>
 
@@ -56,7 +52,7 @@
 									</div>
 
 									<div align="left" class="control-group">
-										<label class="control-label" for="basicinput">paralel</label>
+										<label class="control-label" for="basicinput">Paralel</label>
 										<div class="controls">
 											<input type="text" name="paralel" id="paralel" value="<?php echo $row['paralel']; ?>" placeholder="paralel" class="form-control span8 tip" required>
 										</div>
@@ -73,7 +69,7 @@
 									<br <div class="control-group">
 									<div class="controls">
 										<input type="submit" name="update" id="update" value="Update" class="btn btn-sm btn-primary" />
-										<a href="?page=siswa" class="btn btn-sm btn-danger">Kembali</a>
+										<a href="?page=member" class="btn btn-sm btn-danger">Kembali</a>
 									</div>
 							</div>
 							</form>
@@ -87,9 +83,7 @@
 
 		<!--/.wrapper--><br />
 		<div class="footer span-12">
-			<div class="container">
-				<center> <b class="copyright"><a href=""> SMPN 1 Babadan</a> &copy; 2016 DataTables by Bootstrap </b></center>
-			</div>
+			<div class="container"></div>
 		</div>
 		<script>
 			//options method for call datepicker

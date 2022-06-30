@@ -1,23 +1,24 @@
 <?php
-//koneksi database
-$db_host	= "localhost";
-$db_user	= "root";
-$db_pass	= "";
-$db_name	= "db_perpus";
+include '../conn.php';
+// //koneksi database
+// $db_host	= "localhost";
+// $db_user	= "root";
+// $db_pass	= "";
+// $db_name	= "db_perpus";
 
-$konek	= mysqli_connect($db_host,$db_user,$db_pass,$db_name) or die ("Gagal koneksi ke server");
-if (!$konek) {
-    die("Connection failed: " . mysqli_connect_error());
-} 
-//akhir koneksi
+// $konek	= mysqli_connect($db_host,$db_user,$db_pass,$db_name) or die ("Gagal koneksi ke server");
+// if (!$konek) {
+//     die("Connection failed: " . mysqli_connect_error());
+// } 
+// //akhir koneksi
 
 
 //mengambil data dari tabel dan memasukkannya dalam array
 $query = "SELECT * FROM member ORDER BY nama";
-$sql = mysqli_query($konek,$query);
+$sql = mysqli_query($conn,$query);
 $data = array();
 if ($sql === FALSE) {
-	die(mysqli_error($konek));
+	die(mysqli_error($conn));
 }
 while ($row = mysqli_fetch_assoc($sql)) {
 	array_push($data, $row);
@@ -26,12 +27,11 @@ while ($row = mysqli_fetch_assoc($sql)) {
 //setting judul laporan dan header tabel
 $judul = "LAPORAN DATA SISWA";
 
-$subjudul = "=> SMPN 1 BABADAN <=";
 $header = array(
-	array("label"=>"NIS","length"=>30, "align"=>"C"),
+	array("label"=>"NPM","length"=>30, "align"=>"C"),
 	array("label"=>"NAMA","length"=>50, "align"=>"C"),
-	array("label"=>"KELAS","length"=>80, "align"=>"C"),
-	array("label"=>"JENIS","length"=>30, "align"=>"C"));
+	array("label"=>"PARALEL","length"=>80, "align"=>"C"),
+	array("label"=>"JENIS KELAMIN","length"=>30, "align"=>"C"));
 
 //sertakan library FPDF
 require('fpdf17/fpdf.php');
@@ -49,7 +49,7 @@ $pdf->Cell(0,20, $judul,'0', 1, 'C');
 
 
 //meletakkan gambar
-$pdf->Image('mylogo.jpg',10,8);
+// $pdf->Image('mylogo.jpg',10,8);
 
 //buat header tabel
 $pdf->SetFont('Arial','','10');
@@ -82,5 +82,5 @@ $pdf->Cell(10,5,'Halaman '.$pdf->PageNo(),0,0,'L');
 
 
 //Output File PDF
-$pdf->Output($name='data-siswa.pdf', $dest='I');
+$pdf->Output($name='data-member.pdf', $dest='I');
 ?>
