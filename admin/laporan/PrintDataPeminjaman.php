@@ -33,9 +33,9 @@ while ($row = mysqli_fetch_assoc($sql)) {
 $judul = "LAPORAN DATA PEMINJAMAN";
 
 $header = array(
-	array("label"=>"IdTrx","length"=>30, "align"=>"C"),
-	array("label"=>"ID Buku","length"=>50, "align"=>"C"),
-	array("label"=>"Judul","length"=>80, "align"=>"C"),
+	array("label"=>"IdTrx","length"=>15, "align"=>"C"),
+	array("label"=>"ID Buku","length"=>15, "align"=>"C"),
+	array("label"=>"Judul","length"=>60, "align"=>"C"),
 	array("label"=>"NPM","length"=>30, "align"=>"C"),
 	array("label"=>"Tgl Pinjam","length"=>30, "align"=>"C"),
 	array("label"=>"Tempo","length"=>30, "align"=>"C"),
@@ -46,7 +46,7 @@ $header = array(
 //sertakan library FPDF
 require_once "mpdf/vendor/autoload.php";
 $mpdf = new \Mpdf\Mpdf();
-$mpdf->AddPage("P", "", "", "", "", "15", "15", "15", "15", "", "", "", "", "", "", "", "", "", "", "", "A4");
+$mpdf->AddPage("L", "", "", "", "", "15", "15", "15", "15", "", "", "", "", "", "", "", "", "", "", "", "A4");
 $mpdf->WriteHTML($content);
 
 //tampilkan judul laporan
