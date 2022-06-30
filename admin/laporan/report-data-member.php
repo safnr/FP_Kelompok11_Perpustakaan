@@ -35,5 +35,5 @@ $i = $i - 1;
 $sheet->getStyle('A1:D' . $i)->applyFromArray($styleArray);
 
 $writer = new Xlsx($spreadsheet);
-$writer->save('Report Data Siswa.xlsx');
+$writer->save('Report Data S?.xlsx');
 ?>
