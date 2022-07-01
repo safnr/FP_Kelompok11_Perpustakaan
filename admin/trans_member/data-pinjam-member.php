@@ -26,7 +26,12 @@
           $query = "select peminjaman.idtrx, peminjaman.id, peminjaman.judul, peminjaman.npm, member.nama, peminjaman.tgl_pinjam, peminjaman.tgl_kembali, peminjaman.jmlpinjam from peminjaman,member where peminjaman.npm=member.npm and status='Dipinjam' order by idtrx desc";
           $tampil = mysqli_query($conn, $query) or die(mysqli_error($conn));
           ?>
-
+         <form class="navbar-form navbar-left" role="search" action="?page=judul_search" method="post">
+           <div class="form-group">
+             <input type="text" name="cari" class="form-control" placeholder="Masukkan Judul">
+           </div>
+           <button type="submit" class="btn btn-default" id="button_find">Submit</button>
+         </form>
          <table class="table table-hover">
            <thead>
              <tr>
@@ -39,8 +44,6 @@
                <th>Tempo</th>
                <th>Jumlah</th>
                <th width="10%">Terlambat</th>
-               <th>Kembali</th>
-               <th>Perpanjang</th>
 
              </tr>
            </thead>
@@ -80,8 +83,6 @@
                     }
                     ?>
                  </td>
-                 <td><a href="?page=pengembalian-member&idtrx=<?php echo $row['0']; ?>">Kembalikan</a></td>
-                 <td><a href="?page=perpanjangan-member&idtrx=<?php echo $row['0']; ?>">Perpanjang</a></td>
 
 
                </tr>

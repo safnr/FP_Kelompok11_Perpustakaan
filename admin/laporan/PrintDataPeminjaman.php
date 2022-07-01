@@ -75,7 +75,5 @@ foreach ($data as $baris) {
 	$mpdf->Ln();
 }
 
-
-
 //Output File PDF
 $mpdf->Output($name='data-peminjaman-member.pdf', $dest='I');
