@@ -84,10 +84,7 @@ if (!isset($_SESSION['nama'])) {
 						include "jumbotron.php";
 						break;
 
-					case 'judul_search':
-						include 'trans_member/judul_search.php';
-						break;
-				}
+					}
 				?>
 				<br>
 				<br>
